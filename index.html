@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Calculator</title>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row d-flex justify-content-center mt-5">
+				<div class="col-xl-4 col-lg-5 col-md-6 col-sm-8 col-9">
+					<div class="calculator border rounded-lg bg-light">
+						<div class="row cal_display d-flex justify-content-center">
+							<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+								<div class="form-group py-1 mt-3 text-right bg-white border display">
+									<label id="result" class="px-2" for="">104</label>
+									<label id="inputDisplay" class="w-100 p-2 m-0 text-right" for=""></label>
+								</div>
+							</div>
+						</div>
+
+						<div class="row cal_buttons">
+							
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 	col-12">
+
+								<div class="row mb-2">
+									<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+										<button id="BracketOpen" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>(</b></button>
+										<button id="BracketClose" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>)</b></button>
+										<button id="mod" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>%</b></button>
+										<button id="ac" class="btn btn-outline-dark mx-2" onclick="allClear()"><b>AC</b></button>
+									</div>
+								</div>
+
+							</div>
+
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<div class="row mb-2">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+											<button id="seven" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>7</b></button>
+											<button id="eight" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>8</b></button>
+											<button id="nine" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>9</b></button>
+											<button id="div" class="btn btn-outline-dark mx-2" onclick="divi()"><b>÷</b></button>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<div class="row mb-2">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+											<button id="four" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>4</b></button>
+											<button id="five" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>5</b></button>
+											<button id="six" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>6</b></button>
+											<button id="mul" class="btn btn-outline-dark mx-2" onclick="mul()"><b>×</b></button>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<div class="row mb-2">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+											<button id="one" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>1</b></button>
+											<button id="two" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>2</b></button>
+											<button id="three" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>3</b></button>
+											<button id="sub" class="btn btn-outline-dark mx-2" onclick="sub()"><b>-</b></button>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+									<div class="row mb-2 mb-4">
+										<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-center">
+											<button id="zero" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>0</b></button>
+											<button id="dot" class="btn btn-outline-dark mx-2" onclick="inputNumbers(this)"><b>.</b></button>
+											<button id="equal" class="btn btn-outline-dark mx-2" onclick="calculate()"><b>=</b></button>
+											<button id="add" class="btn btn-outline-dark mx-2" onclick="add()"><b>+</b></button>
+										</div>
+									</div>
+								</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
