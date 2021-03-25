@@ -1,4 +1,4 @@
-var FirstNumber, SecondNumber, Operator, tempOperator, Result;
+var FirstNumber, SecondNumber, Operator, tempOperator, Result, flag;
 
 
 function inputNumbers(command){
@@ -30,8 +30,18 @@ function inputNumbers(command){
             tempOperator = '';
             break;
 
+        case '%':
+            updateLabel1(Operator);
+            tempOperator = '';
+            break;
+
         default:
             break;
+    }
+
+    if(Result !== null && flag ===1){
+        document.getElementById('inputDisplay').innerHTML = '';
+        flag = 0;
     }
 
     console.log(PreNum);
@@ -115,6 +125,14 @@ function divi(){
     document.getElementById('inputDisplay').innerHTML = '/';
 }
 
+function mod(){
+    Operator = '%';
+    tempOperator = '%'
+    FirstNumber = parseFloat(document.getElementById('inputDisplay').innerHTML);
+    document.getElementById('result').innerHTML = FirstNumber;
+    document.getElementById('inputDisplay').innerHTML = '%';
+}
+
 function allClear(){
     console.log('Im Mehedi');
     document.getElementById('result').innerHTML = '';
@@ -139,6 +157,7 @@ function updateLabel1(value){
 }
 
 function calculate(){
+
     SecondNumber = document.getElementById('inputDisplay').innerHTML;
     updateLabel1(SecondNumber);
     
@@ -146,21 +165,31 @@ function calculate(){
         case '+':
             Result = parseFloat(FirstNumber) + parseFloat(SecondNumber);
             document.getElementById('inputDisplay').innerHTML = Result;
+            flag = 1;
             break;
 
         case '-':
             Result = parseFloat(FirstNumber) - parseFloat(SecondNumber);
             document.getElementById('inputDisplay').innerHTML = Result;
+            flag = 1;
             break;
 
         case '*':
             Result = parseFloat(FirstNumber) * parseFloat(SecondNumber);
             document.getElementById('inputDisplay').innerHTML = Result;
+            flag = 1;
             break;
 
         case '/':
             Result = parseFloat(FirstNumber) / parseFloat(SecondNumber);
             document.getElementById('inputDisplay').innerHTML = Result;
+            flag = 1;
+            break;
+
+        case '%':
+            Result = parseFloat(FirstNumber) % parseFloat(SecondNumber);
+            document.getElementById('inputDisplay').innerHTML = Result;
+            flag = tru1e;
             break;
 
         default:
