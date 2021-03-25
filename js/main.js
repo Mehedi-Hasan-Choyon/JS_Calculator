@@ -156,7 +156,18 @@ function updateLabel1(value){
     document.getElementById('inputDisplay').innerHTML= '';
 }
 
+function existingOperation(){
+    document.getElementById('result').innerHTML = '';
+    document.getElementById('result').innerHTML = FirstNumber + Operator + '';
+    flag = 0;
+}
+
 function calculate(){
+
+    if(flag === 1){
+        let tempNum = document.getElementById('inputDisplay').innerHTML;
+        existingOperation(tempNum);
+    }
 
     SecondNumber = document.getElementById('inputDisplay').innerHTML;
     updateLabel1(SecondNumber);
